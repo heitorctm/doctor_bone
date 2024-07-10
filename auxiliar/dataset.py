@@ -55,20 +55,19 @@ def processar_imagem(nome_do_arquivo, label, male, preprocess_input, img_tamanho
 
 def criar_dataset(dataframe, diretorio, batch_size, rede, shuffle=False, png=True, repeat=True, data_aug=False):
     """
-    Cria um dataset TensorFlow a partir de um dataframe contendo caminhos de arquivos e labels.
+    criar o dataset de um dataframe contendo caminhos de arquivos e labels
 
     Args:
-        dataframe (pd.DataFrame): DataFrame contendo os caminhos das imagens e labels.
-        diretorio (str): Diretório base onde as imagens estão armazenadas.
-        batch_size (int): Tamanho do batch para o treinamento.
-        rede (str): Nome do modelo CNN a ser usado para determinar o preprocessamento.
-        shuffle (bool): Se deve ou não embaralhar o dataset.
-        png (bool): Se as imagens são PNG (True) ou JPEG (False).
-        repeat (bool): Se o dataset deve ser repetido indefinidamente.
-        data_aug (bool): Se deve ou não aplicar data augmentation.
+        dataframe (pd.DataFrame): dataFrame com as labels, sexo e nome do arquivo
+        diretorio (str): diretorio das
+        batch_size (int): batch do treinamento
+        rede (str): modelo pra determinar o preprocessamento e tamanho da imagem
+        shuffle (bool): embaralhar o dataset de treino
+        png (bool): PNG ou JPG
+        data_aug (bool): aplicar data augmentation
 
-    Returns:
-        tf.data.Dataset: Dataset processado e pronto para o treinamento.
+    return:
+        tf.data.Dataset: dataset pronto para o treinamento
     """
     preprocess_input, img_tamanho = get_preprocess(rede)
     
