@@ -12,8 +12,7 @@ from tensorflow.keras import backend as K
 
 '''
 callbacks sao algumas funções já pre estabelecidas pelo keras que te retorna ou faz algo enquanto treina.
-depois implementei o r2 e o otimizador adamW que o tensorflow não tem nativo.
-depois uma funcaozinha pra filtrar por genero. nao tem como eu ficar treinando com todos os dados sempre.
+depois uma funcaozinha pra filtrar por genero. nao tem como eu ficar treinando com todos os dados sempre. (nao tem mais isso)
 fiquei testando varias so com o masculino, peguei as melhores e depois testei com fem e com os dois.
 '''
 
