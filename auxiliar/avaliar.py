@@ -65,7 +65,7 @@ def salvar_previsoes(model, dataset_teste, dados_teste, nome_modelo, id_rodada, 
     ids = dados_teste['id'].values
 
     mae_manual = np.mean(np.abs(predicoes.flatten() - labels_teste))
-    print(f'MAE Manual para o modelo {nome_modelo}: {mae_manual}')
+    print(f'conferenciazinha {nome_modelo}: {mae_manual}')
 
     resultados_df = pd.DataFrame({
         'id': ids, 
