@@ -5,6 +5,7 @@ from tensorflow.keras.applications.resnet_v2 import preprocess_input as preproce
 from tensorflow.keras.applications.convnext import preprocess_input as preprocess_convnext
 
 def get_preprocess(cnn):
+
     preprocess_dict = {
         'InceptionV3': (preprocess_inception_v3, (299, 299)),
         'InceptionResNetV2': (preprocess_inception_resnet_v2, (299, 299)),
@@ -16,5 +17,5 @@ def get_preprocess(cnn):
         'EfficientNetV2B3': (preprocess_efficientnet_v2s, (300, 300))
     }
     if cnn not in preprocess_dict:
-        raise ValueError(f"Modelo {cnn} não configurado")
+        raise ValueError(f'não tem esse modelo')
     return preprocess_dict[cnn]
