@@ -57,7 +57,7 @@ def criar_dataset(dataframe, diretorio, batch_size, rede, shuffle=False, png=Tru
     """
     criar o dataset de um dataframe contendo caminhos de arquivos e labels
 
-    Args:
+    args:
         dataframe (pd.DataFrame): dataFrame com as labels, sexo e nome do arquivo
         diretorio (str): diretorio das
         batch_size (int): batch do treinamento
