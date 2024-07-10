@@ -5,7 +5,6 @@ from tensorflow.keras.applications.resnet_v2 import preprocess_input as preproce
 from tensorflow.keras.applications.convnext import preprocess_input as preprocess_convnext
 
 def get_preprocess(cnn):
-    """Retorna a função de preprocessamento e o tamanho da imagem baseado na CNN escolhida."""
     preprocess_dict = {
         'InceptionV3': (preprocess_inception_v3, (299, 299)),
         'InceptionResNetV2': (preprocess_inception_resnet_v2, (299, 299)),
