@@ -78,5 +78,5 @@ def salvar_previsoes(model, dataset_teste, dados_teste, nome_modelo, id_rodada, 
 def salvar_resultados(resultados_lista):
 
     log_teste_df = pd.DataFrame(resultados_lista)
-    cabeçalho = not os.path.isfile(f'./log_teste/log_teste.csv')
-    log_teste_df.to_csv(f'./log_teste/log_teste.csv', mode='a', header=cabeçalho, index=False)
+    cabecalho = not os.path.isfile(f'./log_teste/log_teste.csv')
+    log_teste_df.to_csv(f'./log_teste/log_teste.csv', mode='a', header=cabecalho, index=False)
