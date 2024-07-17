@@ -17,6 +17,9 @@ criando uma sequencia de augmentation de dados para aumentar a variabilidade dos
     - RandomFlip: inverte a imagem horizontalmente
     - RandomRotation: rotaciona a imagem aleatoriamente
     - RandomZoom: aplica um zoom aleatorio na imagem
+
+o chat gpt sempre tenta colocar um data generator. nao use! é desatualizado com as coisas mais novas dokeras.
+essa é uma abordagem defazada. usa o keras.sequential que é melhor.
 '''
 
 
